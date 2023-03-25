@@ -1,0 +1,79 @@
+<div class="body">
+    <div class="container">
+        <h1 style="color: black;">Welcome to Booking Page</h1>
+    </div>
+    <form class="form-container">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 border p-4 shadow bg-light">
+                    <div class="col-12">
+                        <h3 class="fw-normal text-secondary fs-4 text-uppercase mb-4">BOOKING PAGE</h3>
+                    </div>
+                    <form (ngSubmit)="onBook()" (click)="increment()">
+                        <div class="row g-3">
+                            <div class="col-md-50">
+                                <label>Patient Name:</label>
+                                <input style = "width: 250px;height:30px" type="text" name="name" class="form-control" placeholder="Name" [(ngModel)]="loaddata.name">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="col-md-50">
+                                <label>Patient Phone_number:</label>
+                                <input style = "width: 250px;height:30px" type="tel" name="phone_number" class="form-control" placeholder="Phone Number" [(ngModel)]="loaddata.phone_number">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="col-md-50">
+                                <label>Patient Email:</label>
+                                <input style = "width: 250px;height:30px" type="email" name="email" class="form-control" placeholder="Enter Email" [(ngModel)]="loaddata.email">
+                            </div>
+                            <br>
+                            <br>
+
+                            <div class="col-md-50">
+                                <label>Choose a date:</label>
+                                <input style = "width: 250px;height:30px" [min]="minDate()" [max]="maxDate()" type="date" id="demo" class="txtDate" name="date" [(ngModel)]="loaddata.date" (change)="getSlots(loaddata.date)">
+                                
+                            </div>
+                            
+                            <br>
+                            <br>
+                            <div class="slotcal">
+                                <label>Choose Slot:</label>   
+                                <select style = "width: 250px;height:30px" class="form-control" name="slot_id" [(ngModel)]="loaddata.slot_id" *ngIf="dayslot">
+                                    <option>--select--</option> 
+                                    <option *ngFor="let slot of dayslot" [value]="slot">
+                                        <span *ngIf="slot == 1">10:00 AM</span>
+                                        <span *ngIf="slot == 2">10:30 AM</span>
+                                        <span *ngIf="slot == 3">11:00 AM</span>
+                                        <span *ngIf="slot == 4">11:30 AM</span>
+                                        <span *ngIf="slot == 5">12:00 PM</span>
+                                    </option>
+                                </select>
+                                
+                            </div>
+                            <br>
+                            <br>
+                            <div class="col-12 mt-5" *ngIf="!isPaymentDone">                        
+                                <button type="submit" class="btn btn-primary float-end" style="width: 250px;height:30px" (click)="paynow()">Pay 200 Now</button>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="payment-popup" *ngIf="isPaymentDone">  
+                                Payment Done!  
+                                <div class="col-12 mt-5">                        
+                                    <button type="submit" class="btn btn-primary float-end" style="width: 250px;height:30px" [disabled] = "!isPaymentDone" (click)="enableBooking()">Book Appointment</button>
+                                </div>
+                            </div>
+                            <div *ngIf="appointmentEnabled">
+                                <p>Appointment Booked Successfully</p>
+                              </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+    
+

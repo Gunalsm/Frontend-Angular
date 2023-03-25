@@ -1,0 +1,15 @@
+.body{
+    background-image: url("https://soti.net/media/6454/blog-banner.png");
+    background-size:cover;
+    background-position: center;
+    height:100vh;    
+  }
+
+.container h1{
+    text-align: right;
+}
+
+.container{
+    padding: 10%;
+    text-align: right;
+}

@@ -1,0 +1,59 @@
+/* .container{
+    text-align: center;
+}
+.col-md-50{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.body{
+    background-image: url("https://www.shutterstock.com/image-photo/doctor-hospital-background-copy-space-260nw-1008604453.jpg");
+    background-size: cover;
+    background-position: center;
+    height:100%;
+    margin:0;
+    padding-top:0%;
+    padding: 0%;
+    margin-top:0%;
+    
+  }
+
+  .center {
+    text-align: center;
+    
+  } */
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120%;
+  }
+
+  .content {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .table {
+    margin: 20px 0;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .table td {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid black;
+  }
+
+  html, body {
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #pdf-content {
+    padding: 20px;
+  }

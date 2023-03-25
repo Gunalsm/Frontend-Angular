@@ -1,0 +1,37 @@
+<div class="body">
+    <div class="container">
+
+        <h1 style="color: lavender;">Welcome to Doctor-Login Page</h1>
+    </div>
+    <form class="example-form">
+    <form>
+        <div class="login-container">
+        <div class="login-content">
+        
+                <form (ngSubmit)="doctorsubmit()">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="Enter your Name" name="username" [(ngModel)]="doctorlogindata.username">
+                </mat-form-field>
+                <br>
+                <br>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Enter your password" type="{{ passwordFieldType }}" name="password" [(ngModel)]="doctorlogindata.password">
+                    <mat-icon (click)="togglePasswordVisibility()">{{ passwordFieldType === 'password' ? 'visibility_off' : 'visibility' }}</mat-icon>
+                    <!-- <button mat-icon-button type="button" (click)="togglePasswordVisibility()">
+                        <mat-icon>{{ passwordFieldType === 'password' ? 'visibility_off' : 'visibility' }}</mat-icon>
+                    </button> -->
+                    
+                </mat-form-field>
+                <br>
+                <br>
+                <button mat-raised-button color="primary">Login</button>
+                </form>
+        </div>
+        </div>  
+
+    </form>
+    </form>
+</div>
+    

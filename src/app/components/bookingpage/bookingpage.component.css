@@ -1,0 +1,33 @@
+.container{
+    text-align: center;
+}
+.container h1{
+    color: lavender;
+}
+
+.form-container{
+
+    width:40%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:lavender;
+    padding: 60px;
+    display: flex;
+    
+}
+/* .body{
+    background-color: url("https://img.freepik.com/premium-photo/stethoscope-blue-green-background-wallpaper-copy-space-symbol-decoration-medical-hospital-clinic-health-care-treatment-doctor-nurse-instrument-heartbeat-patient-diagnostic-exam-disease-physician_178037-1195.jpg?w=1060");
+
+} */
+
+.body{
+    background-image: url("https://img.freepik.com/premium-photo/stethoscope-blue-green-background-wallpaper-copy-space-symbol-decoration-medical-hospital-clinic-health-care-treatment-doctor-nurse-instrument-heartbeat-patient-diagnostic-exam-disease-physician_178037-1195.jpg?w=1060");
+    background-size: cover;
+    background-position: center;
+    height:130%;
+    margin:0;
+    padding-top:0%;
+    padding: 0%;
+    margin-top:0%;
+    
+  }

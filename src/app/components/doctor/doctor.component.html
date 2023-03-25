@@ -1,0 +1,47 @@
+<div class="body">
+  <div class="catagory">
+      <div class="container" style="color: black;">
+      <h1>Welcome to Doctor Page</h1>
+      </div>
+  </div>
+
+    <div class="container mt-5">
+    
+      <h2>Doctor Details</h2>
+      
+      <input type="text" [(ngModel)]="searchTerm"  placeholder="Search for a doctor">
+
+      <br>
+      <br>
+      <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+              <th>DOC_Id</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>PhoneNumber</th>
+              <th>Catagory</th>
+              <th>Action </th>
+            </tr>
+        </thead>
+        <tbody>
+          
+          <tr *ngFor="let user of filteredDoctors">
+            <td>{{ user.doc_id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.phone_number }}</td>
+            <td>{{ user.catagory }}</td>
+            <td>
+              <button type="button" class="btn btn-primary" (click)="bookappoint(user)">Book Now</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <br>
+    <div class="card">
+      <a href="/bookeddetailpage" class="btn btn-secondary btn-sm" style="font-size: medium;">View Appointments</a>
+    </div>
+</div>

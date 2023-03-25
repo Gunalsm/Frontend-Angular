@@ -1,0 +1,33 @@
+.example-form{
+    text-align: center;
+}
+
+.login-container {
+    width:40%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:lavender;
+    padding: 40px;
+    display: flex;
+  }
+
+.login-content {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+  }
+
+.container{
+    text-align: center;
+}
+.body{
+  background-image: url("https://thumbs.dreamstime.com/b/medicine-doctor-touching-electronic-medical-record-tablet-dna-digital-healthcare-network-connection-hologram-modern-virtual-154741318.jpg");
+  background-size: cover;
+  background-position: center;
+  height:100%;
+  margin:0;
+  padding-top:0%;
+  padding: 0%;
+  margin-top:0%;
+  
+}

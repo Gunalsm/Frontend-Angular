@@ -1,0 +1,110 @@
+<div class="body">
+  
+  <h1 style="text-align: center" >Appointment Booked details </h1>
+  <div class="card" style="text-align: center;">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search with date">
+  </div>
+  <br>
+  <br>
+
+  <table class="table table-bordered table-striped">
+      <thead>
+          <tr>
+            <th>APP_Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>PhoneNumber</th>
+            <th>Slot_Id</th>
+            <th>Doc_id</th>
+            <th>Pat_Id</th>
+            <th>Date</th>
+            <th>Doc_Name</th>
+            <th>DOC_Specialisation</th>
+            <th>Edit</th>
+            <th>Action</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of filteredDoctors,let i=index">
+          <td>{{ book.app_id }}</td>
+          <td>
+            <div *ngIf="book.isEdit">
+              <input type="text" class="form-control" [(ngModel)]="book.name" >
+            </div>
+            <div *ngIf="!book.isEdit">
+              {{ book.name }}
+            </div>
+          </td>
+          <td>
+            <div *ngIf="book.isEdit">
+              <input type="text" class="form-control" [(ngModel)]="book.email">
+            </div>
+            <div *ngIf="!book.isEdit">
+
+              {{ book.email }}
+            </div>
+          </td>
+          <td>
+            <div *ngIf="book.isEdit">
+              <input type="text" class="form-control" [(ngModel)]="book.phone_number">
+            </div>
+            <div *ngIf="!book.isEdit">
+              {{ book.phone_number }}
+            </div>
+          </td>
+          <td>
+            <div *ngIf="book.isEdit">
+              <input type="text" class="form-control" [(ngModel)]="book.slot_id">
+            </div>
+            <div *ngIf="!book.isEdit">
+              {{ book.slot_id }}
+            </div>
+
+          </td>
+          <td>
+            {{book.doc_id}}
+          </td>
+          <td>
+            <div *ngIf="book.isEdit">
+              <input type="text" class="form-control" [(ngModel)]="book.pat_id">
+            </div>
+            <div *ngIf="!book.isEdit">
+              {{ book.pat_id }}
+            </div>
+          </td>
+          <td>
+            <div *ngIf="book.isEdit">
+              <input type="text" class="form-control" [(ngModel)]="book.date">
+            </div>
+            <div *ngIf="!book.isEdit">
+              {{ book.date }}
+            </div>
+          </td>
+          <td>
+            {{ docList[i+1].name }}
+            
+          </td>
+          <td>
+            {{ docList[i+1].catagory}}
+          </td>
+          <td>
+            <div *ngIf="book.isEdit">
+              <button type="button" class="btn btn-primary" (click)="updateAppointment(book.app_id)">Update</button>
+              <button type="button" class="btn btn-primary" (click)="book.isEdit = false">Cancel</button>
+            </div>
+            <div *ngIf="!book.isEdit">
+
+              <button type="button" class="btn btn-primary" (click)="onEdit(book)">EDIT</button>
+            </div>
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary" (click)="deleteAppointment(book.app_id)">DELETE</button>
+          </td>
+        
+
+        </tr>
+      </tbody>
+  </table>
+</div>
+
+

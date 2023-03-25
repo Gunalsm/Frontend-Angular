@@ -4,9 +4,17 @@
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
     "types": [
-      "jasmine"
+      "jest",
+      "node"
+      
     ]
   },
+  "files":[
+    "src/setup.jest.ts",
+    "src/app/services/admin.service.ts"
+
+
+  ],
   "include": [
     "src/**/*.spec.ts",
     "src/**/*.d.ts"

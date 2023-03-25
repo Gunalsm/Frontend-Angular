@@ -1,0 +1,36 @@
+<div class="body">
+<h1 style="text-align:center">DETAILS PAGE</h1>
+
+<div class="container">
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+              <th>Patient Name</th>
+              <th>User ID</th>
+              <th>Patient's Phone_Number</th>
+              <th>Booked_On</th>
+              <th>Slot No</th>
+              <th>Booked Time</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let detail of bookeddetail">
+            <td>{{ detail.name }}</td>
+            <td>{{ detail.pat_id }}</td>
+            <td>{{ detail.phone_number}}</td>
+            <td>{{ detail.date }}</td>
+            <td>{{ detail.slot_id }}</td>
+          
+            <td>
+                <p *ngIf ="detail.slot_id == 1 ">10.00AM</p>
+                <p *ngIf ="detail.slot_id == 2 ">10.30AM</p>
+                <p *ngIf ="detail.slot_id == 3 ">11.00AM</p>
+                <p *ngIf ="detail.slot_id == 4 ">11.30AM</p>
+                <p *ngIf ="detail.slot_id == 5 ">12.00PM</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div> 
+</div>

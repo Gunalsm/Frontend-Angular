@@ -1,0 +1,32 @@
+<div class="body">
+
+  <div class="guna">
+      <div class="container" style="color: black;">
+      <h1>Welcome to Doctor Details Page</h1>
+      </div>
+  </div>
+
+    <div class="container mt-5">
+    
+      <h2>Doctor Details</h2>
+      
+      <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+              <th>DOC_Id</th>
+              <th>Name</th>
+              <th>Catagory</th>
+              <th>Doctor_ Degree</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userList">
+            <td>{{ user.doc_id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.catagory }}</td>
+            <td>{{ user.doc_degree}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>

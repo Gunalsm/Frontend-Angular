@@ -1,0 +1,48 @@
+<div class="body">
+    <div class="container">
+        <h2>Welcome to Register Page</h2>
+        <h3>Create an Account</h3>
+    </div>
+
+    <form class="example-form">
+    <form>
+        <div class="login-container">
+        <div class="login-content">
+
+
+        <form (ngSubmit)="onRegister()" (click)="increment()">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Enter Name</mat-label>
+            <input matInput placeholder="Enter your Name" name="name" [(ngModel)]="data.name">
+        </mat-form-field>
+        <br>
+        
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Enter Email</mat-label>
+            <input matInput placeholder="Enter your mail" name="email" [(ngModel)]="data.email">
+        </mat-form-field>
+        <br>
+        
+        
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Phone Number</mat-label>
+            <input matInput placeholder="Enter your phonenumber" name="phone_number" [(ngModel)]="data.phone_number">
+        </mat-form-field>
+        <br>
+        
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Create Password</mat-label>
+            <input matInput placeholder="Enter your password" name="password" [(ngModel)]="data.password">
+        </mat-form-field>
+        <br>
+        
+        <button mat-raised-button color="primary">Register</button>
+        <div class="text-center signup">
+            Do you have an account ? <a href="/loginpage">Login</a>
+        </div>
+        </form>
+    </div>
+    </div>  
+    </form>
+    </form>
+</div>

@@ -1,0 +1,102 @@
+<div class="body">
+    <h1 style="text-align: center">DETAILS PAGE</h1>
+  
+    <div id="pdf-content" class="center">
+      <div class="content">
+        <h2 style="text-align: center; font-size: 24px; margin-bottom: 20px;">STL DIGITAL HOSPITAL</h2>
+  
+        <h1 style="color: brown; font-size: 32px; margin-bottom: 20px;">Your Booking is Done with Dr. {{doc_data.name}}</h1>
+  
+        <table class="table">
+          <tr>
+            <td>Patient Name:</td>
+            <td>{{showbookeddetail.name}}</td>
+          </tr>
+          <tr>
+            <td>PAT_ID:</td>
+            <td>{{showbookeddetail.pat_id}}</td>
+          </tr>
+          <tr>
+            <td>Doctor Name:</td>
+            <td>{{doc_data.name}}</td>
+          </tr>
+          <tr>
+            <td>Doctor Category:</td>
+            <td>{{doc_data.catagory}}</td>
+          </tr>
+          <tr>
+            <td>Patient's Phone Number:</td>
+            <td>{{showbookeddetail.phone_number}}</td>
+          </tr>
+          <tr>
+            <td>Booked On:</td>
+            <td>{{showbookeddetail.date}} at {{showbookeddetail.slot_id}} slot</td>
+          </tr>
+          <tr *ngIf="showbookeddetail.slot_id == 1">
+            <td>Booked at:</td>
+            <td>10.00 AM</td>
+          </tr>
+          <tr *ngIf="showbookeddetail.slot_id == 2">
+            <td>Booked at:</td>
+            <td>10.30 AM</td>
+          </tr>
+          <tr *ngIf="showbookeddetail.slot_id == 3">
+            <td>Booked at:</td>
+            <td>11.00 AM</td>
+          </tr>
+          <tr *ngIf="showbookeddetail.slot_id == 4">
+            <td>Booked at:</td>
+            <td>11.30 AM</td>
+          </tr>
+          <tr *ngIf="showbookeddetail.slot_id == 5">
+            <td>Booked at:</td>
+            <td>12.00 PM</td>
+          </tr>
+        </table>
+      </div> 
+    </div>
+    <div style="text-align: center;">
+      <button (click)="generatePDF()" style="background-color:cadetblue; color: white; border: none; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">Generate PDF</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="body"> 
+   <h1 style="text-align:center">DETAILS PAGE</h1>
+
+    <div id="pdf-content" class="center" style="border: 30px;">
+        <div >
+            <h2>STL Hospital</h2>
+
+            <h1 style="color: brown;">You Booking is done with Dr. {{doc_data.name}}</h1>
+
+            
+            <p>Patient Name: {{showbookeddetail.name}}</p>
+            <p>PAT_ID: {{showbookeddetail.pat_id}}</p>   
+            <p>Doctor Name: {{doc_data.name}}</p>
+            <p>Doctor_Catagory: {{doc_data.catagory}}</p>
+            <p>Patient's Phone_Number: {{showbookeddetail.phone_number}}</p>
+            <p>Booked On {{showbookeddetail.date}} at {{showbookeddetail.slot_id}} slot</p>
+            <p *ngIf ="showbookeddetail.slot_id == 1 ">Booked at:10.00AM</p>
+            <p *ngIf ="showbookeddetail.slot_id == 2 ">Booked at:10.30AM</p>
+            <p *ngIf ="showbookeddetail.slot_id == 3 ">Booked at:11.00AM</p>
+            <p *ngIf ="showbookeddetail.slot_id == 4 ">Booked at:11.30AM</p>
+            <p *ngIf ="showbookeddetail.slot_id == 5 ">Booked at:12.00PM</p> 
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <button (click)="generatePDF()">Generate PDF</button>
+    </div>
+   
+    
+</div>
+
+ -->

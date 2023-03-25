@@ -1,0 +1,42 @@
+import { TestBed } from '@angular/core/testing';
+import { BookingpageComponent } from './bookingpage.component';
+
+describe('BookingpageComponent', () => {
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [BookingpageComponent],
+    }).compileComponents();
+  });
+
+  it('should create the component', () => {
+    const fixture = TestBed.createComponent(BookingpageComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
+  });
+});
+
+
+
+// import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+// import { BookingpageComponent } from './bookingpage.component';
+
+// describe('BookingpageComponent', () => {
+//   let component: BookingpageComponent;
+//   let fixture: ComponentFixture<BookingpageComponent>;
+
+//   beforeEach(async () => {
+//     await TestBed.configureTestingModule({
+//       declarations: [ BookingpageComponent ]
+//     })
+//     .compileComponents();
+
+//     fixture = TestBed.createComponent(BookingpageComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
+
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });

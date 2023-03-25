@@ -1,0 +1,23 @@
+
+<div class="navbar navbar-default" style="background-color:cadetblue">
+    <div class="container-fluid">
+
+          <div  class="navbar-header">
+              <a href="#" class="navbar-brand" style="color:lavender">STL HOSPITAL </a>
+            </div>
+        
+            <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="/doctorloginpage" *ngIf="!checkcondition()" style="color:lavender">Doctor-Login</a></li>
+                    <li><a href="/loginpage" *ngIf="!checkcondition()" (click)="btnClick()" style="color:lavender">Patient-Login</a></li>
+                    <li><a href='' *ngIf="checkcondition()" (click)="logout()" style="color:lavender">Logout</a></li>
+                    <li><a href="/adminpage" *ngIf="!checkcondition()" style="color:lavender">Admin-Login</a></li>
+                    <li><a href="/contactpage" *ngIf="!checkcondition()" style="color:lavender">Contact Us</a></li>
+
+
+            </ul>
+    </div>
+</div>
+
+ 
+

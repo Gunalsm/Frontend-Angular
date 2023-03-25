@@ -1,0 +1,112 @@
+<div class="body">
+  <br>
+  <br><br>
+  <br>
+  <div class="header">
+    <h1>Welcome to Our Hospital</h1>
+    <p>We're Here to Help You</p>
+    <p>We are a team of experienced doctors dedicated to providing quality healthcare.</p>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2>Our Services</h2>
+      <h4>We offer a wide range of medical services to meet your needs. Our experienced team of doctors and nurses is here to provide you with the highest quality care.</h4>
+      
+    </div>
+    <div class="card">
+      <h2>Available Doctors</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Specialty</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userList; let i = index">
+            <td>{{ user.name }}</td>
+            <td>{{ user.catagory }}</td>
+            
+          </tr>
+        </tbody>
+      </table>
+      <!-- <a style="text-align: center;" href="/loginpage" class="btn">View Doctors</a> -->
+      <button class="btn btn-primary" style="text-align: center;" (click)="view()">View Doctors</button>
+      
+    </div>
+    
+    <div class="card">
+      <h2>Our Facilities</h2>
+      <h4>Our state-of-the-art facilities are equipped with the latest technology and equipment to ensure that you receive the best possible care. We strive to create a comfortable and welcoming environment for all of our patients.</h4> 
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="card">
+    <h2>Online Appointment Booking</h2>
+    <h4>With our online appointment booking feature, you can easily schedule your next visit with one of our doctors. Simply visit our website and select your preferred date and time.</h4>
+    <!-- <a href="/loginpage" style="text-align: center;" class="btn">Book Appointment</a> -->
+    <button class="btn btn-primary" style="text-align: center;" (click)="book()">Book Appointment</button>
+  </div>
+  <br>
+  <br>
+  
+  <div class="card">
+    <h2>Health Blog</h2>
+    <h4>Our health blog provides a wealth of information about a variety of health topics, including tips for staying healthy, information about common health conditions, and more.</h4>
+    <a style="text-align: center;" class="btn">Visit Our Blog</a>
+  </div>
+
+  <br>
+  <div class="testimonials-section">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-card">
+      <p>"I had a great experience with this hospital. The doctors were very professional and caring. I would definitely recommend them to anyone looking for quality healthcare."</p>
+      <div class="testimonial-info">
+        <img src="https://th.bing.com/th/id/OIP.XianBBOr5UzrPHWQB7MlkwHaEc?pid=ImgDet&w=193&h=115&c=7&dpr=1.5" alt="Customer Photo">
+        <h3 style="text-align: center;">Manu</h3>
+        <p style="text-align: center;">Marketing Manager</p>
+      </div>
+    </div>
+    <hr>
+    <div class="testimonial-card">
+      <p>"I was impressed by the level of expertise and attention to detail of the doctors at this hospital. They took the time to listen to my concerns and provided personalized care."</p>
+      <div class="testimonial-info">
+        <img src="https://th.bing.com/th/id/R.06167655095a396b0f13958345314e22?rik=nL5gg4kZ0AUbgw&riu=http%3a%2f%2fimg.freepik.com%2ffree-photo%2fportrait-of-businessman-in-office-1_1262-1487.jpg%3fsize%3d338%26ext%3djpg&ehk=oiEn3%2fIX519oKMWn6Rw%2fa4ZD1SvfnwrNGBAqG9PcB7s%3d&risl=&pid=ImgRaw&r=0" alt="Customer Photo" >
+        <h3 style="text-align: center;">Sai Charan</h3>
+        <p style="text-align: center;">Artist</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="footer" style="color: black; text-align:center; background-color:cadetblue">
+    <div class="footer-links">
+      <a href="#" style="color: lavender;">About Us</a>
+      <a href="#" style="color: lavender;">Our Services</a>
+      <a href="#" style="color: lavender;">Our Team</a>
+      <a href="#" style="color: lavender;">Blog</a>
+      <a href="/contactpage" style="color: lavender;">Contact Us</a>
+    </div>
+  
+    
+    <br>
+    <hr>
+    <br>
+    <p>&copy; 2023 My Website. All rights reserved.</p>
+  </div>
+ 
+
+  <!-- <div class="footer" style="color: black; text-align:center; background-color:cadetblue">
+    <p>&copy; 2023 My Website. All rights reserved.</p>
+  </div> -->
+  <br>
+</div>
+
+
+
+
+
+
+
+

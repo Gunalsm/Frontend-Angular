@@ -1,0 +1,40 @@
+<div class="body">
+    <div class="container">
+
+        <h1>Welcome to Admin-Login Page</h1>
+    </div>
+    <form class="example-form">
+    <form>
+        <div class="login-container">
+        <div class="login-content">
+        
+                <form (ngSubmit)="doSubmitForm()">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="Enter your Name" name="username" [(ngModel)]="admindata.username">
+                </mat-form-field>
+                <br>
+                <br>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Enter your password" type="{{ passwordFieldType }}" name="password" [(ngModel)]="admindata.password">
+                    <button mat-icon-button type="button" (click)="togglePasswordVisibility()">
+                        <mat-icon>{{ passwordFieldType === 'password' ? 'visibility_off' : 'visibility' }}</mat-icon>
+                    </button>
+                    <!-- <input matInput placeholder="Enter your password" type="password" name="password" [(ngModel)]="admindata.password"> -->
+                </mat-form-field>
+                <br>
+                <br>
+                <button mat-raised-button color="primary">Login</button>
+                </form>
+        </div>
+        </div>
+    </form>
+    </form>
+</div>
+    
+
+    
+
+            
+        
